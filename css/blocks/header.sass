@@ -1,0 +1,91 @@
+.header
+  padding: 20px 0
+  position: relative
+  z-index: 2
+
+  .logo a
+    +center
+
+  &_top
+    +space-nw
+    margin-bottom: 40px
+
+  &__socials
+    p
+      @include font($white, $medium, 18px, 1)
+      margin-bottom: 15px
+
+    ul
+      display: flex
+      list-style: none
+      margin: 0
+      padding: 0
+
+    li
+      &:not(:last-child)
+        margin-right: 15px
+
+      a
+        width: 55px
+        height: 55px
+        border: 2px solid $border
+        +center
+        +round
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    &__phone
+      @include font($white, $medium, 30px, 1)
+      text-decoration: none
+      display: flex
+      align-items: flex-start
+      margin-bottom: 10px
+
+      &:hover
+        text-decoration: underline
+
+      &::before
+        content: url("../images/smartphone.svg")
+        margin-right: 15px
+
+  &_bottom
+    nav
+      +center
+
+    ul
+      +center
+      margin: 0
+      list-style: none
+      padding: 0 0 30px
+      position: relative
+
+      &::after
+        content: ' '
+        display: block
+        width: 100%
+        height: 2px
+        background: $white
+        opacity: 0.3
+        bottom: 0
+        position: absolute
+
+      li
+        &:not(:last-child)
+          margin-right: 40px
+
+          &::after
+            content: url("../images/rumb.svg")
+            margin-left: 40px
+
+      a
+        @include font($white, $medium, 15px, 1)
+        letter-spacing: 0.15em
+        text-transform: uppercase
+        font-weight: 600
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
