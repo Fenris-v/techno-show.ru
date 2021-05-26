@@ -1,0 +1,102 @@
+@media only screen and (max-width: 1000px)
+  .header
+    &__socials
+      display: none
+
+    &__contacts
+      margin-right: 70px
+
+    .header_bottom
+      display: none
+
+  .hero
+    &__slider
+      .slick-slide
+        padding-bottom: 0
+        padding-top: 250px
+
+      .anchor
+        margin-bottom: 40px
+
+      &__link
+        position: static
+
+        &__container
+          width: 100%
+
+      &__tagline
+        margin-bottom: 150px
+
+  .about
+    flex-direction: column
+
+    &_top
+      padding: 50px 0 160px
+
+      .about__bg
+        left: -15px
+        right: -15px
+
+    &_bottom
+      margin-top: 50px
+
+      img
+        display: none
+
+      p
+        margin-left: 0
+
+    &_right
+      padding-left: 0
+      width: 100%
+      display: flex
+      align-items: flex-start
+      justify-content: center
+      padding-top: 50px
+
+      &__item
+        width: 200px
+        margin-bottom: 0 !important
+
+        &:not(:last-child)
+          margin-right: 50px
+
+  .spec__list__item
+    width: 100%
+
+  .consult
+    p
+      max-width: 100%
+
+    &__form
+      &__container
+        flex-direction: column
+
+      &__inputs
+        width: 100%
+        order: 2
+
+    &__socials
+      margin-left: 0
+      order: 1
+      margin-bottom: 20px
+      display: flex
+      justify-content: space-between
+      flex-direction: row
+      width: 100%
+
+      a
+        width: 32%
+        +box
+
+        img
+          margin-right: 10px
+
+  .footer
+    flex-direction: column
+
+    .header__socials
+      display: block
+
+    .header__contacts
+      margin: 30px auto 0

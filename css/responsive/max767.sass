@@ -1,0 +1,61 @@
+@media only screen and (max-width: 767px)
+  .header
+    &_top
+      flex-direction: column
+
+    &__contacts
+      margin-right: 0
+      align-items: center
+      margin-top: 30px
+
+  .s_hero
+    margin-top: -300px
+
+  .hero
+    &__slider
+      .slick-slide
+        padding-top: 290px
+
+  .advantages__bg
+    display: none
+
+  .consult
+    &__form__inputs__row
+      flex-direction: column
+
+      > div
+        width: 100%
+
+        &:not(:last-child)
+          margin-bottom: 20px
+
+    &__socials
+      flex-direction: column
+
+      a
+        width: auto
+
+        &:not(:last-child)
+          margin-bottom: 20px
+
+  .footer
+    &_left
+      &_top
+        flex-direction: column
+
+        .copyright
+          margin: 0 auto 30px
+
+      &_top .logo a
+        margin-right: 0
+        margin-bottom: 20px
+
+    .header__socials
+      text-align: center
+
+      ul
+        justify-content: center
+
+    .header_bottom
+      ul
+        flex-wrap: wrap
