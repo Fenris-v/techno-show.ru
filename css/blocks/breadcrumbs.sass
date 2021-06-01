@@ -1,0 +1,28 @@
+.breadcrumbs
+  h1
+    @include font($white, $bold, 45px, 1)
+    text-align: center
+    margin: 15px 0 40px
+
+  ul
+    list-style: none
+    padding: 0 0 40px
+    margin: 0
+    +center
+
+  li
+    @include font(rgba(255, 255, 255, 0.5), $medium, 16px, 1)
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      &::after
+        content: url(../images/rumb.svg)
+        margin-left: 20px
+
+  a
+    @include font($white, $medium, 16px, 1)
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline

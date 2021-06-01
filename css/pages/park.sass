@@ -1,0 +1,73 @@
+.park
+  &__list
+    margin: 0 0 60px
+    padding: 0
+    list-style: none
+    +space-nw
+
+    &__icon
+      background: #f3f3f3
+      width: 60px
+      height: 60px
+      +center
+      +round
+      margin-right: 25px
+
+    li
+      display: flex
+      align-items: center
+      @include font($textBlack, $medium, 24px, 1)
+
+  hr
+    height: 1px
+    border: none
+    width: 100%
+    background: #C4C4C4
+    opacity: 0.3
+    margin-bottom: 50px
+
+  &__content
+    display: flex
+    align-items: flex-start
+    margin-bottom: 60px
+
+    p
+      margin-right: 100px
+      @include font($textBlack, $regular, 18px, 1.5)
+
+.provide
+  .innerTitle
+    &::after
+      margin-top: 50px
+
+  &__list
+    +space
+
+    &__item
+      width: 31%
+      margin-bottom: 60px
+
+      img
+        width: 100%
+        +cover
+        margin-bottom: 30px
+
+      &__title
+        @include font($textBlack, $medium, 30px, 1.2)
+        margin-bottom: 10px
+
+      p
+        @include font($textBlack, $medium, 15px, 1.6)
+        margin-bottom: 10px
+
+      a
+        @include font($beige, $bold, 13px, 1.5)
+        text-decoration: underline
+        text-transform: uppercase
+        display: flex
+        align-items: center
+
+        &::after
+          margin-left: 30px
+          content: url("../images/park/arrow.svg")
+          padding-top: 3px
