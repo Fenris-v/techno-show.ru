@@ -37,8 +37,21 @@
 
 .provide
   .innerTitle
+    position: relative
+
     &::after
       margin-top: 50px
+
+    &::before
+      position: absolute
+      width: 100%
+      height: 1px
+      z-index: -1
+      background: #C4C4C4
+      display: block
+      content: ' '
+      opacity: 0.3
+      bottom: 0
 
   &__list
     +space

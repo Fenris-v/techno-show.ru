@@ -4,9 +4,23 @@
   z-index: 2
 
   &__inner
+    margin-bottom: 60px
+    position: relative
+
+    &::after
+      position: absolute
+      bottom: 0
+      left: 50%
+      @include transform(translateX(-50%))
+      width: 50px
+      height: 3px
+      background: $beige
+      content: ' '
+      display: block
+
     .wrapper_fullHD
       background: url("../images/bg-header.jpg") no-repeat
-    margin-bottom: 60px
+      background-size: cover
 
   .logo a
     +center

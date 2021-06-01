@@ -250,9 +250,25 @@ p {
   position: relative;
   z-index: 2; }
   .header__inner {
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    position: relative; }
+    .header__inner::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: #E5B57A;
+      content: " ";
+      display: block; }
     .header__inner .wrapper_fullHD {
-      background: url("../images/bg-header.jpg") no-repeat; }
+      background: url("../images/bg-header.jpg") no-repeat;
+      background-size: cover; }
   .header .logo a {
     display: flex;
     justify-content: center;
@@ -991,6 +1007,18 @@ footer .wrapper_fullHD {
 .s_reviews .wrapper_fullHD {
   background: url("../images/reviews.jpg");
   background-size: cover; }
+.s_reviews.s_reviews_white .wrapper_fullHD {
+  background: #fff; }
+  .s_reviews.s_reviews_white .wrapper_fullHD .innerTitle, .s_reviews.s_reviews_white .wrapper_fullHD .reviews__list__item__title,
+  .s_reviews.s_reviews_white .wrapper_fullHD .reviews__list__item__date, .s_reviews.s_reviews_white .wrapper_fullHD .reviews__list__item p {
+    color: #000000; }
+  .s_reviews.s_reviews_white .wrapper_fullHD .slick-arrow {
+    fill: #000; }
+    .s_reviews.s_reviews_white .wrapper_fullHD .slick-arrow svg circle {
+      fill: #ffffff;
+      stroke: #000; }
+    .s_reviews.s_reviews_white .wrapper_fullHD .slick-arrow svg g {
+      fill: #000; }
 
 .reviews {
   padding: 70px 0; }
@@ -1049,6 +1077,8 @@ footer .wrapper_fullHD {
       color: #ffffff;
       line-height: 1;
       opacity: 0.5; }
+  .reviews .slick-arrow svg g {
+    fill: #fff; }
   .reviews .slick-arrow.slick-next {
     -moz-transform: none;
     -ms-transform: none;
@@ -1072,7 +1102,9 @@ footer .wrapper_fullHD {
   position: relative; }
   .advantages .innerTitle {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    max-width: 600px;
+    line-height: 1.2; }
   .advantages ul {
     margin: 0;
     padding: 0;
@@ -1120,6 +1152,20 @@ footer .wrapper_fullHD {
 .s_consult .wrapper_fullHD {
   padding: 70px 0;
   background: url("../images/cons-bg.jpg"); }
+.s_consult.s_consult_white .wrapper_fullHD {
+  background: #F0F3F7; }
+.s_consult.s_consult_white .bg_left, .s_consult.s_consult_white .bg_right {
+  background: none; }
+.s_consult.s_consult_white .consult .innerTitle, .s_consult.s_consult_white .consult p, .s_consult.s_consult_white .consult input {
+  color: #000; }
+.s_consult.s_consult_white .consult .consult__socials a {
+  color: #E5B57A;
+  background: #E7EDF3;
+  border: none; }
+.s_consult.s_consult_white .consult .btn_beige {
+  color: #ffffff; }
+.s_consult.s_consult_white .consult svg path {
+  fill: #E5B57A; }
 .s_consult .bg_left, .s_consult .bg_right {
   position: absolute;
   top: 0;
@@ -1186,7 +1232,6 @@ footer .wrapper_fullHD {
           font-family: Gilroy Medium, sans-serif;
           color: #000000;
           line-height: 65px;
-          font-weight: 600;
           -moz-transition: all 0.4s ease 0s;
           -o-transition: all 0.4s ease 0s;
           -webkit-transition: all 0.4s ease 0s;
@@ -1220,11 +1265,13 @@ footer .wrapper_fullHD {
     font-size: 18px;
     font-family: Gilroy Medium, sans-serif;
     color: #000000;
-    line-height: 1.1; }
+    line-height: 1.1;
+    border: none; }
     .consult__form textarea:focus {
       outline: none; }
   .consult__form .btn {
-    border: none; }
+    border: none;
+    cursor: pointer; }
     .consult__form .btn:focus {
       outline: none; }
   .consult__socials {
@@ -1238,6 +1285,7 @@ footer .wrapper_fullHD {
     .consult__socials a {
       white-space: nowrap;
       display: flex;
+      align-items: center;
       border: 1px solid #868583;
       padding: 0 30px;
       font-size: 13px;
@@ -1247,7 +1295,7 @@ footer .wrapper_fullHD {
       text-transform: uppercase;
       font-weight: 600;
       text-decoration: none; }
-      .consult__socials a img {
+      .consult__socials a svg {
         margin-right: 30px; }
 
 .park__list {
@@ -1292,8 +1340,20 @@ footer .wrapper_fullHD {
     color: #000000;
     line-height: 1.5; }
 
-.provide .innerTitle::after {
-  margin-top: 50px; }
+.provide .innerTitle {
+  position: relative; }
+  .provide .innerTitle::after {
+    margin-top: 50px; }
+  .provide .innerTitle::before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    z-index: -1;
+    background: #C4C4C4;
+    display: block;
+    content: " ";
+    opacity: 0.3;
+    bottom: 0; }
 .provide__list {
   display: flex;
   justify-content: space-between;

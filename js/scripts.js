@@ -6,8 +6,8 @@ $(document).ready(() => {
         infinite: true,
         arrows: true,
         dots: true,
-        nextArrow: '<button type="button" class="slick-next"><svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.2" r="27" transform="matrix(-1 0 0 1 27.5 27.5)" stroke="white"/><g opacity="0.8"><path d="M25.5962 22.2574L26.6287 21.2249L32.4037 26.9999L26.6287 32.7749L25.5962 31.7424L30.3387 26.9999L25.5962 22.2574H25.5962Z" fill="white"/></g></svg></button>',
-        prevArrow: '<button type="button" class="slick-prev"><svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.2" r="27" transform="matrix(-1 0 0 1 27.5 27.5)" stroke="white"/><g opacity="0.8"><path d="M25.5962 22.2574L26.6287 21.2249L32.4037 26.9999L26.6287 32.7749L25.5962 31.7424L30.3387 26.9999L25.5962 22.2574H25.5962Z" fill="white"/></g></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg width="55" height="55" viewBox="0 0 55 55" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.2" r="27" transform="matrix(-1 0 0 1 27.5 27.5)" stroke="white"/><g opacity="0.8"><path d="M25.5962 22.2574L26.6287 21.2249L32.4037 26.9999L26.6287 32.7749L25.5962 31.7424L30.3387 26.9999L25.5962 22.2574H25.5962Z"/></g></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="55" height="55" viewBox="0 0 55 55" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.2" r="27" transform="matrix(-1 0 0 1 27.5 27.5)" stroke="white"/><g opacity="0.8"><path d="M25.5962 22.2574L26.6287 21.2249L32.4037 26.9999L26.6287 32.7749L25.5962 31.7424L30.3387 26.9999L25.5962 22.2574H25.5962Z"/></g></svg></button>',
         slidesToShow: 1,
         autoplay: true,
     });

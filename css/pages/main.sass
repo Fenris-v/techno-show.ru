@@ -333,6 +333,25 @@
     background: url("../images/reviews.jpg")
     background-size: cover
 
+  &.s_reviews_white
+    .wrapper_fullHD
+      background: #fff
+
+      .innerTitle, .reviews__list__item__title,
+      .reviews__list__item__date, .reviews__list__item p
+        color: $textBlack
+
+      .slick-arrow
+        fill: #000
+
+        svg
+          circle
+            fill: #ffffff
+            stroke: #000
+
+          g
+            fill: #000
+
 .reviews
   padding: 70px 0
 
@@ -389,6 +408,10 @@
         opacity: 0.5
 
   .slick-arrow
+    svg
+      g
+        fill: #fff
+
     &.slick-next
       +transform(none)
 
@@ -408,6 +431,8 @@
   .innerTitle
     position: relative
     z-index: 2
+    max-width: 600px
+    line-height: 1.2
 
   ul
     margin: 0
@@ -455,6 +480,28 @@
   .wrapper_fullHD
     padding: 70px 0
     background: url("../images/cons-bg.jpg")
+
+  &.s_consult_white
+    .wrapper_fullHD
+      background: #F0F3F7
+
+    .bg_left, .bg_right
+      background: none
+
+    .consult
+      .innerTitle, p, input
+        color: #000
+
+      .consult__socials a
+        color: $beige
+        background: #E7EDF3
+        border: none
+
+      .btn_beige
+        color: $white
+
+      svg path
+        fill: $beige
 
   .bg
     &_left, &_right
@@ -519,7 +566,6 @@
             background: $white
             width: 100%
             @include font($textBlack, $medium, 18px, 65px)
-            font-weight: 600
             +transition
             padding: 0 30px
             +box
@@ -541,12 +587,14 @@
       +box
       resize: none
       @include font($textBlack, $medium, 18px, 1.1)
+      border: none
 
       &:focus
         outline: none
 
     .btn
       border: none
+      cursor: pointer
 
       &:focus
         outline: none
@@ -563,6 +611,7 @@
     a
       white-space: nowrap
       display: flex
+      align-items: center
       border: 1px solid #868583
       padding: 0 30px
       @include font($white, $medium, 13px, 60px)
@@ -570,5 +619,5 @@
       font-weight: 600
       text-decoration: none
 
-      img
+      svg
         margin-right: 30px
