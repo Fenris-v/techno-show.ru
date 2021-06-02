@@ -322,8 +322,10 @@
 
       a
         @include font($textBlack, $medium, 20px, 1.5)
-        font-weight: 600
         text-decoration: none
+
+        &:focus
+          outline: none
 
         &:hover
           text-decoration: underline

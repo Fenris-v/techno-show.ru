@@ -1,0 +1,124 @@
+.s_equipment
+  margin-bottom: 60px
+
+.equipment
+  &__list
+    padding-bottom: 50px
+    margin: 0 -10px 70px
+
+    &__item
+      margin: 0 10px
+
+      img
+        height: 430px
+        margin-bottom: 40px
+        width: 100%
+        +cover
+
+      p
+        max-width: 470px
+        @include font($textBlack, $medium, 20px, 1.3)
+        text-align: center
+        margin: 0 auto
+
+    &::after, &::before
+      content: ' '
+      display: block
+      position: absolute
+      bottom: 0
+
+    &::after
+      width: 50px
+      height: 3px
+      background: $beige
+      left: 50%
+      @include transform(translateX(-50%))
+
+    &::before
+      left: 0
+      width: 100%
+      background: #C4C4C4
+      height: 1px
+      opacity: 0.3
+
+  .slick-arrow
+    &.slick-prev
+      left: 10px
+      @include transform(translateX(-50%))
+
+    &.slick-next
+      right: 10px
+      @include transform(translateX(50%) rotate(180deg))
+
+  &__desc
+    background: #F3F3F3
+    padding: 60px
+    +box
+
+    p
+      margin: 0 0 40px
+
+    .innerTitle, p
+      max-width: 840px
+
+.s_gallery
+  margin-bottom: 70px
+
+  .wrapper_fullHD
+    background: #f3f3f3
+    margin-bottom: 70px
+
+.gallery
+  &__tabs
+    +space-nw
+
+    &__item
+      cursor: pointer
+      @include font($textBlack, $medium, 20px, 1.2)
+      white-space: nowrap
+      padding: 20px 0
+      position: relative
+
+      &.active
+        opacity: 0.5
+        cursor: unset
+
+        &::after
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 50px
+          height: 3px
+          background: #939393
+          content: ' '
+          display: block
+
+  &__content
+    &__item
+      display: none
+      grid-template-columns: repeat(4, 1fr)
+      grid-column-gap: 15px
+      grid-row-gap: 15px
+
+      &.active
+        display: grid
+
+      img
+        width: 100%
+        height: 100%
+        +cover
+
+      &__more
+        background: $beige
+        +center
+        flex-direction: column
+        text-decoration: none
+        @include font($white, $medium, 16px, 1.3)
+
+        &__num
+          font-size: 58px
+          font-family: $bold
+
+        p
+          max-width: 170px
+          text-align: center

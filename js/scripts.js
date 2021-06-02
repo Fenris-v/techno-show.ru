@@ -39,6 +39,60 @@ $(document).ready(() => {
         ]
     });
 
+    $('.equipment__list').slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        nextArrow: '<button type="button" class="slick-next"><svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27.5" cy="27.5" r="27.5" fill="#213360"/><g opacity="0.8"><path d="M29.4038 22.2575L28.3713 21.225L22.5963 27L28.3713 32.775L29.4038 31.7425L24.6613 27L29.4038 22.2575H29.4038Z" fill="#F2F2F2"/></g></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27.5" cy="27.5" r="27.5" fill="#213360"/><g opacity="0.8"><path d="M29.4038 22.2575L28.3713 21.225L22.5963 27L28.3713 32.775L29.4038 31.7425L24.6613 27L29.4038 22.2575H29.4038Z" fill="#F2F2F2"/></g></svg></button>',
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+
+    $('.clients__list').slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        nextArrow: '<button type="button" class="slick-next"><svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27.5" cy="27.5" r="27.5" fill="#213360"/><g opacity="0.8"><path d="M29.4038 22.2575L28.3713 21.225L22.5963 27L28.3713 32.775L29.4038 31.7425L24.6613 27L29.4038 22.2575H29.4038Z" fill="#F2F2F2"/></g></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27.5" cy="27.5" r="27.5" fill="#213360"/><g opacity="0.8"><path d="M29.4038 22.2575L28.3713 21.225L22.5963 27L28.3713 32.775L29.4038 31.7425L24.6613 27L29.4038 22.2575H29.4038Z" fill="#F2F2F2"/></g></svg></button>',
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+
     $('.hero__slider').slick({
         infinite: true,
         arrows: false,
@@ -63,5 +117,28 @@ $(document).ready(() => {
         let id = $(e.target).attr('href');
         let top = $(id).offset().top;
         $('body, html').animate({scrollTop: top}, 1500);
+    });
+
+    /**
+     * Табы
+     */
+    let tabList = $('.gallery__tabs__item');
+    let tabContent = $('.gallery__content__item');
+    tabList.on('click', (e) => {
+        e.preventDefault();
+
+        let currentTab = $(e.target).hasClass('gallery__tabs__item')
+            ? $(e.target)
+            : $(e.target).parents('.gallery__tabs__item');
+
+        if (currentTab.hasClass('active')) {
+            return;
+        }
+
+        tabList.removeClass('active');
+        tabContent.removeClass('active');
+
+        currentTab.addClass('active');
+        tabContent.eq(currentTab.index()).addClass('active');
     });
 });

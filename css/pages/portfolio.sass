@@ -1,0 +1,26 @@
+.s_clients
+  margin-bottom: 70px
+
+.clients
+  &__list
+    &__item
+
+      &:not(:last-child)
+        border-right: none
+
+      > div
+        +center
+        height: 140px
+        border: 1px solid #F2F2F2
+
+      img
+        max-width: 90%
+        max-height: 90%
+        +fit(contain)
+
+  .slick-arrow
+    &.slick-prev
+      @include transform(translateX(-50%))
+
+    &.slick-next
+      @include transform(translateX(50%) rotate(180deg))
