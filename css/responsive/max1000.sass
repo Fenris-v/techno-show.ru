@@ -9,6 +9,9 @@
     .header_bottom
       display: none
 
+    &__inner
+      margin-bottom: 40px
+
   .hero
     &__slider
       .slick-slide
@@ -45,6 +48,13 @@
 
       p
         margin-left: 0
+
+    &.about_inner
+      .about_right
+        display: none
+
+      .about_top
+        padding-bottom: 50px
 
     &_right
       padding-left: 0
@@ -100,3 +110,30 @@
 
     .header__contacts
       margin: 30px auto 0
+
+  .park
+    &__list
+      flex-wrap: wrap
+      margin-bottom: 0
+
+      li
+        width: 50%
+        margin-bottom: 40px
+
+    &__content
+      flex-direction: column
+
+      p
+        width: 100%
+        margin: 0 0 40px 0
+
+  .event
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+
+  .gallery__tabs
+    flex-direction: column
+
+  .gallery__content
+    &__item.active
+      grid-template-columns: repeat(3, 1fr)

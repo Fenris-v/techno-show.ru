@@ -24,3 +24,12 @@
 
     &_right
       margin-left: 30px
+
+  .equipment, .clients
+    .slick-arrow
+      &.slick-next
+        @include transform(rotate(180deg))
+
+      &.slick-prev
+        left: 10px
+        @include transform(none)

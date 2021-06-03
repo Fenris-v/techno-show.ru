@@ -50,17 +50,9 @@ $(document).ready(() => {
         autoplay: true,
         responsive: [
             {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 640,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
                 }
             },
         ]
@@ -77,16 +69,23 @@ $(document).ready(() => {
         autoplay: true,
         responsive: [
             {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                }
+            },
+            {
                 breakpoint: 1000,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 640,
+                breakpoint: 767,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },

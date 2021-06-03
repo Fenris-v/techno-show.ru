@@ -59,3 +59,16 @@
     .header_bottom
       ul
         flex-wrap: wrap
+
+  .event__list
+    grid-template-columns: repeat(1, 1fr)
+
+  .gallery__content
+    &__item.active
+      grid-template-columns: repeat(2, 1fr)
+
+  .paginate ul li:first-child
+    margin-right: 5px
+
+  .paginate ul li:last-child
+    margin-left: 5px
