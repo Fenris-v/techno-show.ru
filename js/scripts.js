@@ -119,7 +119,7 @@ $(document).ready(() => {
     });
 
     /**
-     * Табы
+     * TABS
      */
     let tabList = $('.gallery__tabs__item');
     let tabContent = $('.gallery__content__item');
@@ -139,5 +139,14 @@ $(document).ready(() => {
 
         currentTab.addClass('active');
         tabContent.eq(currentTab.index()).addClass('active');
+    });
+
+    /**
+     * FANCYBOX
+     */
+    $('[data-fancybox-modal]').fancybox({
+        trapFocus: true,
+        autoFocus: false,
+        touch: false,
     });
 });
